@@ -13,18 +13,22 @@
   transform: translate(-50%, -50%);
 }
 
-// Media Query Manager
+// * Media Query Manager
 // 0 - 600px: Phone
 // 600 - 900px: Tablet Portrait
 // 900 - 1200px: Landscape Tablets
 // [1200 - 1800px] - normal styles apply
 // 1800px + Big desktop
 
-// $breakpoint argument choices
+// * $breakpoint argument choices
 // -phone
 // -tab-port
 // -tab-land
 // -big-desktop
+
+// *ORDER*: base + typography > generaly layout + grid > page layout > components
+
+// 1em = 16px
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
