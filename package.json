@@ -4,11 +4,17 @@
   "description": "landing page for natours",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon_font.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 5 versions' css/style.concat.css -o css/style.prefix.css"
   },
   "author": "Aatif",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^7.0.3"
+    "autoprefixer": "^10.4.13",
+    "concat": "^1.0.3",
+    "node-sass": "^7.0.3",
+    "postcss-cli": "^10.0.0"
   }
 }
